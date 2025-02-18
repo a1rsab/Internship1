@@ -797,7 +797,7 @@ h3 {
 		padding: 29px 57px;
 	}
 	.promo__subtitle {
-		width: 442px;
+		max-width: 442px;
 	}
 	.choice__wrapper {
 		gap: 18px;
