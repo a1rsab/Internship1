@@ -20,40 +20,40 @@ h1 {
 	text-align: center;
 }
 h2 {
-	color:  #1B1F2B;
+	color: #1b1f2b;
 	font-size: 59px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 124%; 
+	line-height: 124%;
 	text-align: center;
 }
 h3 {
-	color: #1B1F2B;
+	color: #1b1f2b;
 	font-size: 35px;
 	font-style: normal;
 	font-weight: 500;
-	line-height: 122%; 
+	line-height: 122%;
 }
 .big {
-	color: #1B1F2B;
+	color: #1b1f2b;
 	font-size: 23px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 122%; 
+	line-height: 122%;
 }
 .normal {
-	color: #1B1F2B;
+	color: #1b1f2b;
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 142%; 
+	line-height: 142%;
 }
 .small {
-	color: #1B1F2B;
+	color: #1b1f2b;
 	font-size: 17px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 142%; 
+	line-height: 142%;
 	letter-spacing: -0.17px;
 }
 .container {
@@ -82,27 +82,35 @@ h3 {
 	display: flex;
 	gap: 50px;
 }
-.header__nav a {
+/* у тебя есть класс для ссылки .header__link давай его использовать для стилизации, 
+так как если использовать тег, а не более уникальный идентификатор, 
+то в случае если у тебя внутри nav появятся новые ссылки (не в рамках этого проекта, а в целом такое может быть), 
+то этот стиль будет применять и туда */
+
+/* можно в целом опустить .header__nav, так как у тебя этот класс должен быть для одного элемента
+ты пишешь по БЭМ (блок-элемент-модификатор), поэтому header у тебя скорее всего будет один */
+.header__link {
 	position: relative;
 	color: #ffffff;
 }
 .header__phone {
 	color: #ffffff;
+	text-wrap: nowrap;
 }
 .header_fixed {
 	position: fixed;
-  	background: rgba(243, 239, 232, 0.6);
-  	backdrop-filter: blur(27px);
+	background: rgba(243, 239, 232, 0.6);
+	backdrop-filter: blur(27px);
 }
 .header_fixed .header__link::after {
 	content: "";
-	background-color: #1B1F2B;
+	background-color: #1b1f2b;
 }
 .header_fixed .header__img {
 	content: url(../icons/YourTour-bl.svg);
 }
 .header_fixed a {
-	color: #1B1F2B;
+	color: #1b1f2b;
 }
 .header__nav a::after {
 	content: "";
@@ -122,19 +130,19 @@ h3 {
 .promo {
 	padding-top: 207px;
 	background: url(../img/header-img.png) center center/cover no-repeat;
-} 
+}
 .promo .container {
 	margin-top: 0;
 	padding-bottom: 120px;
 }
 .promo__title {
 	max-width: 768px;
-  	margin-inline: auto;
+	margin-inline: auto;
 }
 .promo__subtitle {
 	max-width: 562px;
 	margin: 50px auto 0 auto;
-	color:  #ffffff;
+	color: #ffffff;
 	text-align: center;
 }
 .promo__button {
@@ -146,17 +154,17 @@ h3 {
 	margin: 50px auto 0;
 	border-radius: 10px;
 	background: #ffffff;
-	color: #1B1F2B;
+	color: #1b1f2b;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 .promo__button:hover {
-	background: #EFA501;
+	background: #efa501;
 	color: #fff;
 	cursor: pointer;
 }
-  .promo__button:active {
-	background: #F8E6BE;
-	color: #1B1F2B;
+.promo__button:active {
+	background: #f8e6be;
+	color: #1b1f2b;
 }
 .choice__title {
 	margin-bottom: 35px;
@@ -170,6 +178,7 @@ h3 {
 }
 .choice__items a {
 	position: relative;
+	transition: color 0.3s ease;
 }
 .choice__items a:not(.active):after {
 	content: "";
@@ -180,7 +189,7 @@ h3 {
 	height: 2px;
 	margin-top: 4px;
 	width: 0%;
-	background-color: #1B1F2B;
+	background-color: #1b1f2b;
 	transition: width 0.3s ease;
 }
 .choice__items a:hover::after {
@@ -188,7 +197,7 @@ h3 {
 	width: 100%;
 }
 .choice__items .active {
-	color: #EFA501;
+	color: #efa501;
 }
 .choice__items .active:after {
 	content: "";
@@ -199,9 +208,9 @@ h3 {
 	height: 2px;
 	margin-top: 4px;
 	width: 0%;
-	background-color: #EFA501;
+	background-color: #efa501;
 	transition: width 0.3s ease;
-} 
+}
 .choice__wrapper {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -232,7 +241,7 @@ h3 {
 	margin-left: -20px;
 }
 .choice__card:hover .choice__block:active {
-	background-color: #EFA501;
+	background-color: #efa501;
 }
 .choice__img {
 	position: absolute;
@@ -265,13 +274,13 @@ h3 {
 	margin-bottom: -4px;
 }
 .choice__more {
-	color: #FFF;
+	color: #fff;
 }
 .collect__subtitle {
 	display: block;
 	margin: 30px auto 0;
 	max-width: 418px;
-	color: #A6A6A6;
+	color: #a6a6a6;
 	text-align: center;
 }
 .collect__form {
@@ -281,7 +290,7 @@ h3 {
 	align-items: flex-start;
 	max-width: 1170px;
 	padding: 70px;
-	background: #FFF;
+	background: #fff;
 }
 .collect__row {
 	display: flex;
@@ -304,25 +313,28 @@ h3 {
 	gap: 10px;
 	align-self: stretch;
 	border-radius: 10px;
-	border: 1px solid #F4F0E9;
-	background: #F9F7F4;
+	border: 1px solid #f4f0e9;
+	background: #f9f7f4;
 	outline: none;
 }
 .collect__input:focus {
-	border: 1px solid #F4F0E9;
-	background: #F9F7F4;
-	border: 1px solid #A6A6A6;
+	border: 1px solid #f4f0e9;
+	background: #f9f7f4;
+	border: 1px solid #a6a6a6;
 }
 .collect__input:hover {
-	border: 1px solid #F4F0E9;
-	background: #F4F0E9;
+	border: 1px solid #f4f0e9;
+	background: #f4f0e9;
 	cursor: pointer;
 }
+.collect__dropdown_wrapper {
+	position: relative;
+}
 .collect__dropdown {
-	color: #A6A6A6;
+	color: #a6a6a6;
 	margin-top: 8px;
 	width: 100%;
-	border: 1px solid #F9F7F4;
+	border: 1px solid #f9f7f4;
 	border-radius: 10px;
 	display: flex;
 	justify-content: space-between;
@@ -330,21 +342,29 @@ h3 {
 	padding: 19px;
 	cursor: pointer;
 	outline: none;
-	background: #F9F7F4 url(../icons/ic-dropdown.svg) calc(100% - 20px) 21px/26px 26px no-repeat;
+	background: #f9f7f4;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
+
+.collect__dropdown_icon {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
 .collect__dropdown_selected {
-	color: #1B1F2B;
+	color: #1b1f2b;
 }
 .collect__dropdown option {
-	color: #1B1F2B;
+	color: #1b1f2b;
 }
 .collect__dropdown:hover {
 	border-radius: 10px;
-	border: 1px solid #F4F0E9;
-	background: #F4F0E9;
+	border: 1px solid #f4f0e9;
+	background: #f4f0e9;
 }
 .collect__input-comment {
 	display: flex;
@@ -355,20 +375,20 @@ h3 {
 	align-self: stretch;
 	outline: none;
 	resize: none;
-	background: #F9F7F4;
-	border: 1px solid #F9F7F4;
-  	border-radius: 10px;
-	color: #1B1F2B;
+	background: #f9f7f4;
+	border: 1px solid #f9f7f4;
+	border-radius: 10px;
+	color: #1b1f2b;
 	margin: 8px 0 33px;
 }
 .collect__input-comment:hover {
-	border: 1px solid #F4F0E9;
-	background: #F4F0E9;
+	border: 1px solid #f4f0e9;
+	background: #f4f0e9;
 	cursor: pointer;
 }
 .collect__input-comment:focus {
-	border: 1px solid #A6A6A6;
-	background: #F4F0E9;
+	border: 1px solid #a6a6a6;
+	background: #f4f0e9;
 }
 .collect__radio-buttons {
 	display: flex;
@@ -389,32 +409,33 @@ h3 {
 	display: inline-block;
 	width: 26px;
 	height: 26px;
-	border: 2px solid #1B1F2B;
+	border: 2px solid #1b1f2b;
 	border-radius: 50%;
 	margin-right: 11px;
 	background-repeat: no-repeat;
 	background-position: center center;
+	/* это тут не нужно, у тебя наверху есть стиль *{box-sizing: border-box} он означает, что применяется для всех элементов */
 	box-sizing: border-box;
 }
 .collect__radio-buttons .custom-radio:checked + label::before {
-	border-color: #1B1F2B;
+	border-color: #1b1f2b;
 	background-color: none;
 	background-image: url("../icons/radiobutton.svg");
 }
 .collect__checkbox {
 	margin-top: 33px;
-	color: #A6A6A6;
+	color: #a6a6a6;
 }
 .collect__checkbox .custom-checkbox {
 	display: none;
 }
 .collect__checkbox p.collect__checkbox__text {
-	color: #A6A6A6;
+	color: #a6a6a6;
 	margin-bottom: 0;
 }
 .collect__checkbox span {
 	margin-left: 4px;
-	color: #1B1F2B;
+	color: #1b1f2b;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 17px;
@@ -423,7 +444,7 @@ h3 {
 	cursor: pointer;
 }
 .collect__checkbox span:hover {
-	border-bottom: 1px solid #1B1F2B;
+	border-bottom: 1px solid #1b1f2b;
 }
 .collect__checkbox span:active {
 	color: #286562;
@@ -439,7 +460,7 @@ h3 {
 	display: inline-block;
 	width: 26px;
 	height: 26px;
-	border: 2px solid #1B1F2B;
+	border: 2px solid #1b1f2b;
 	margin-right: 19px;
 	border-radius: 20%;
 	background-repeat: no-repeat;
@@ -468,16 +489,16 @@ h3 {
 	align-items: center;
 	border-radius: 10px;
 	background-color: #286562;
-	color: #FFF;
+	color: #fff;
 	border: none;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
 }
 .find:hover {
-	background: #3B7E7B;
+	background: #3b7e7b;
 }
 .find:active {
-	background: #627F7E;
+	background: #627f7e;
 }
 .reset {
 	display: flex;
@@ -485,33 +506,33 @@ h3 {
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-	background: #E0F0E5;
+	background: #e0f0e5;
 	border: none;
 	color: #286562;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
 }
 .reset:hover {
-	background: #F1F3F2;
+	background: #f1f3f2;
 }
-.reset:active{
-	background: #D9DFDB;
+.reset:active {
+	background: #d9dfdb;
 }
 .review__title {
-	color: #1B1F2B;
+	color: #1b1f2b;
 	text-align: center;
 	max-width: 529px;
 	margin: 0 auto;
 }
 .review__subtitle {
 	max-width: 418px;
-	color: #A6A6A6;
+	color: #a6a6a6;
 	text-align: center;
 	margin: 30px auto 0;
 }
 .review__cards {
 	display: grid;
-  	grid-template-columns: repeat(auto-fit, minmax(318px, 2fr));
+	grid-template-columns: repeat(auto-fit, minmax(318px, 2fr));
 	margin-top: 100px;
 	gap: 30px;
 }
@@ -521,7 +542,7 @@ h3 {
 	flex-direction: column;
 	justify-content: space-between;
 	border-radius: 50px;
-	background: #F4F0E9;
+	background: #f4f0e9;
 }
 .review__cards__block-footer {
 	margin-top: 70px;
@@ -533,8 +554,8 @@ h3 {
 	margin-bottom: 8px;
 }
 .review__cards__block-footer p.small {
-	color: #A6A6A6;
-  }
+	color: #a6a6a6;
+}
 .review__cards__block-footer img {
 	width: 75px;
 	height: 75px;
@@ -542,7 +563,7 @@ h3 {
 }
 .photo__subtitle {
 	max-width: 418px;
-	color: #A6A6A6;
+	color: #a6a6a6;
 	text-align: center;
 	margin: 30px auto 100px;
 }
@@ -582,7 +603,7 @@ h3 {
 	border-radius: 50px;
 }
 .history p.normal {
-	color: #A6A6A6;
+	color: #a6a6a6;
 	text-align: center;
 	max-width: 418px;
 	margin: 30px auto 100px;
@@ -619,7 +640,7 @@ h3 {
 	margin-left: -21px;
 }
 .history__card:hover .history__card-footer-more:active {
-	background-color: #EFA501;
+	background-color: #efa501;
 }
 .history__card h3 {
 	color: #ffffff;
@@ -674,17 +695,17 @@ h3 {
 	width: 100%;
 }
 .history__card-footer-links a:active {
-	color: #EFA501;
+	color: #efa501;
 }
 .history__card-footer-links a:active::after {
-	background-color: #EFA501;
+	background-color: #efa501;
 }
 .history__card-footer-links a::after {
 	content: "";
 	position: absolute;
 	display: block;
 	margin-top: 6px;
-	top: 70%;
+	bottom: 0;
 	left: 50%;
 	transform: translate(-50%);
 	height: 1px;
@@ -697,37 +718,38 @@ h3 {
 	align-items: center;
 	gap: 30px;
 	margin: 0 auto;
-    justify-content: center;
+	justify-content: center;
 }
 .footer-mini__photo {
 	max-width: 370px;
+	/* для большей адаптивности можно сделать высоту auto */
 	height: 370px;
 	border-radius: 50px;
 }
 .footer-mini__text {
 	max-width: 371px;
 	margin-bottom: 0;
-  }
+}
 .footer-mini__text h3 {
 	margin-bottom: 20px;
 }
 .footer-mini__text p {
-	color: #A6A6A6;
+	color: #a6a6a6;
 	margin-bottom: 0;
 	width: 364px;
 }
 .footer-mini__text p a {
-	color: #1B1F2B;
+	color: #1b1f2b;
 }
 .footer-mini__text p a:hover {
-	border-bottom: 1px solid #1B1F2B;
+	border-bottom: 1px solid #1b1f2b;
 }
 .footer-mini__text p a:active {
 	color: #286562;
 	border-bottom: 1px solid #286562;
 }
 .footer {
-	background-color: #F4F0E9;
+	background-color: #f4f0e9;
 }
 .footer .container {
 	margin-bottom: 0;
@@ -741,7 +763,7 @@ h3 {
 	flex-wrap: wrap;
 }
 .footer__links p {
-	color: #A6A6A6;
+	color: #a6a6a6;
 	margin-bottom: 0;
 }
 .footer__links-social {
@@ -760,12 +782,12 @@ h3 {
 	margin-bottom: 3px;
 }
 .footer__links-social p {
-	color: #1B1F2B;
+	color: #1b1f2b;
 	position: relative;
 	cursor: pointer;
 }
 .footer__links-social p a {
-	color: #1B1F2B;
+	color: #1b1f2b;
 }
 .footer__links-social p::after {
 	content: "";
@@ -775,7 +797,7 @@ h3 {
 	transform: translateX(-50%);
 	height: 1px;
 	width: 0%;
-	background-color: #1B1F2B;
+	background-color: #1b1f2b;
 	transition: width 0.3s ease;
 }
 .footer__links-social p:hover::after {
@@ -785,7 +807,7 @@ h3 {
 
 @media screen and (max-width: 1024px) {
 	body {
-		background-color: #F9F7F4;
+		background-color: #f9f7f4;
 	}
 	.container {
 		padding: 0 53px;
@@ -869,15 +891,15 @@ h3 {
 		width: 100%;
 		justify-content: center;
 	}
-	.container {
-		padding: 0 21px;
-	}
 	.header__nav a {
 		font-size: 18px;
 	}
+	.container {
+		padding: 0 21px;
+	}
+
 	.header__phone {
 		font-size: 18px;
-		text-wrap: nowrap;
 	}
 	.footer-mini {
 		width: 100%;
@@ -941,8 +963,8 @@ h3 {
 		display: none;
 	}
 	.footer__links {
-        justify-content: center;
-    }
+		justify-content: center;
+	}
 }
 @media screen and (max-width: 712px) {
 	.header__nav {
@@ -953,12 +975,12 @@ h3 {
 	}
 	.normal {
 		font-size: 16px;
-    	line-height: 23px;
-    	font-weight: 400;
+		line-height: 23px;
+		font-weight: 400;
 	}
 	.promo {
 		height: 631px;
-    }
+	}
 	.choice__title {
 		margin-bottom: 30px;
 	}
@@ -993,8 +1015,8 @@ h3 {
 
 @media screen and (max-width: 580px) {
 	h1 {
-        font-size: 45px;
-    }
+		font-size: 45px;
+	}
 	h2 {
 		font-size: 35px;
 	}
@@ -1015,7 +1037,7 @@ h3 {
 	}
 	.promo__subtitle {
 		width: 310px;
-    	margin-top: 40px;
+		margin-top: 40px;
 		margin-bottom: 40px;
 	}
 	.choice__wrapper {
@@ -1036,7 +1058,6 @@ h3 {
 	.collect__dropdown {
 		font-size: 16px;
 		line-height: 142%;
-		background: #F9F7F4 url(../icons/ic-dropdown.svg) calc(100% - 9px) 9px/26px 26px no-repeat;
 	}
 	.collect__checkbox span {
 		font-size: 16px;
@@ -1062,7 +1083,7 @@ h3 {
 		display: flex;
 		min-width: 20px;
 		height: 20px;
-		border: 2px solid #1B1F2B;
+		border: 2px solid #1b1f2b;
 		margin-right: 10px;
 		border-radius: 20%;
 		background-repeat: no-repeat;
@@ -1109,7 +1130,7 @@ h3 {
 
 @media screen and (max-width: 360px) {
 	body {
-		background-color: #F9F7F4;
+		background-color: #f9f7f4;
 	}
 	.header .container {
 		padding: 33px 20px;
@@ -1122,7 +1143,7 @@ h3 {
 	}
 	h1 {
 		font-size: 34px;
-		line-height: 112%; 
+		line-height: 112%;
 		letter-spacing: 0.68px;
 	}
 	h2 {
@@ -1145,7 +1166,7 @@ h3 {
 		line-height: 23px;
 		font-weight: 700;
 	}
-	.promo {	
+	.promo {
 		padding-top: 140px;
 		height: 488px;
 	}
@@ -1175,7 +1196,7 @@ h3 {
 	}
 	.choice__card:hover .choice__block {
 		padding: 0;
-		background:none;
+		background: none;
 		margin-left: 0;
 	}
 	.choice__card:hover .choice__block:active {
@@ -1193,7 +1214,7 @@ h3 {
 	}
 	.review__cards {
 		margin-top: 50px;
-		grid-template-columns: repeat(1, 1fr)
+		grid-template-columns: repeat(1, 1fr);
 	}
 	.review__cards__block {
 		padding: 19px;
@@ -1266,7 +1287,7 @@ h3 {
 		padding: 21px 21px;
 		justify-content: center;
 	}
-	.footer img  {
+	.footer img {
 		width: 22px;
 		height: 22px;
 		margin-right: 5px;
