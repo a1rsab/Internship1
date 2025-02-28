@@ -300,7 +300,7 @@ h3 {
 	width: 100%;
 	display: flex;
 	position: relative;
-	padding: 8px;
+	padding: 20px;
 	margin-top: 8px;
 	align-items: center;
 	gap: 10px;
@@ -327,12 +327,12 @@ h3 {
 	color: #A6A6A6;
 	margin-top: 8px;
 	width: 100%;
-	border: 1px solid #F9F7F4;
+	border: 1px solid #F4F0E9;
 	border-radius: 10px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px;
+	padding: 20px;
 	cursor: pointer;
 	outline: none;
 	background: #F9F7F4;
@@ -1180,6 +1180,12 @@ h3 {
 	.collect__subtitle {
 		width: 316px;
 		margin-top: 20px;
+	}
+	.collect__input {
+		padding: 10px;
+	}
+	.collect__dropdown {
+		padding: 10px;
 	}
 	.review__subtitle {
 		margin-top: 20px;
