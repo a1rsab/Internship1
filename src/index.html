@@ -17,14 +17,15 @@
     <header class="header">
         <div class="container">
             <a href="#">
-                <div class="header__img"></div></a>
+                <div class="header__img"></div>
+			</a>
             <nav class="header__nav">
                 <a href="#" class="header__link normal">Туры</a>
             	<a href="#" class="header__link normal">Создать тур</a>
          		<a href="#" class="header__link normal">Отзывы</a>
          		<a href="#" class="header__link normal">Истории</a>
-              </nav>
-              <a href="tel:+79999999999" class="header__phone normal">+7 999 999 99 99</a>
+            </nav>
+            <a href="tel:+79999999999" class="header__phone normal">+7 999 999 99 99</a>
         </div>
     </header>
 
@@ -106,75 +107,77 @@
 <section class="collect container">
 	<h2 class="collect__title">Собери свой тур</h2>
 	<p class="normal collect__subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
-	<div class="collect__form">
-		<div class="collect__row"> 
-			<div class="collect__item">
-				<form action="#">
-					<label class="normal">Имя
+	<form class="collect__form">
+			<div class="collect__row"> 
+				<div class="collect__item">
+					<label class="normal">
+						Имя
 						<input placeholder="Введите Ваше имя" type="text" class="collect__input normal">
 					</label>
-			</div>
-			<div class="collect__item">
+				</div>
+				<div class="collect__item">
 					<label class="normal">
 						Направление
 					</label>
 					<br>
-					<select class="collect__dropdown normal">
-					  <option value="#" hidden>Куда хотите ехать</option>
-					  <option value="#">Первый пункт</option>
-					  <option value="#">Второй пункт</option>
-					</select>
+					<div class="collect__dropdown_wrapper">
+							<select class="collect__dropdown normal">
+					  				<option value="#" hidden>Куда хотите ехать</option>
+					  				<option value="#">Первый пункт</option>
+					  				<option value="#">Второй пункт</option>
+							</select>
+					<img class="collect__dropdown_icon" src="./icons/ic-dropdown.svg" alt="ic-dropdown">
+					</div>
+				</div>	
 			</div>
-		</div>	
-			<div class="collect__row"> 
+		<div class="collect__row"> 
 				<div class="collect__item">	
 					<label class="normal">Email
-						<input placeholder="example@mail.com" type="email" class="collect__input normal">
+							<input placeholder="example@mail.com" type="email" class="collect__input normal">
 					</label>
 			</div>	
 			<div class="collect__item">				
 					<label class="normal">Телефон
-						<input placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="tel" class="collect__input normal">
+							<input placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="tel" class="collect__input normal">
 					</label>				
 			</div>	
 			</div>				
-				<div class="collect__row"> 
-					<div class="collect__item">						
-						<label class="normal">Дата от
+		<div class="collect__row"> 
+			<div class="collect__item">						
+					<label class="normal">Дата от
 							<input placeholder="ДД.ММ.ГГГГ" type="text" class="collect__input normal">
-						</label>					
-				</div>	
-				<div class="collect__item">				
-						<label class="normal">Дата до
+					</label>					
+			</div>	
+			<div class="collect__item">				
+					<label class="normal">Дата до
 							<input placeholder="ДД.ММ.ГГГГ" type="text" class="collect__input normal">
-						</label>					
-				</div>	
-				</div>				
-					<p class="normal">Комментарий</p>
-					<textarea name="" class="collect__input-comment normal" cols="30" rows="10"></textarea>
-					<p class="normal">Вам есть 18 лет?</p>
-					<div class="collect__radio-buttons">					
-							  <input type="radio" name="eighteen" class="custom-radio" id="yes"/>							
-							  <label for="yes">Да</label>
-							  <input type="radio" name="eighteen" class="custom-radio" id="no"/>
-							  <label for="no">Нет</label>						  
-					</div>
-					<div class="collect__checkbox">						
-							<input type="checkbox" name="contract" class="custom-checkbox" id="contract" value="yes" /> 
-							<label for="contract"> 
-								<p class="small collect__checkbox__text">Нажимая кнопку, я принимаю условия<span>Лицензионного договора</span></p>
-							</label>
-					</div>
-			</form>
-					<div class="collect__buttons">
-						<div class="collect__buttons-btn">
-							<input type="submit" class="find normal" name="" value="Найти тур">
-						</div>						
-						<div class="collect__buttons-btn">
-							<input type="reset" class="reset normal" name="" value="Сбросить">
-						</div>
-					</div>
+					</label>					
+			</div>	
+		</div>				
+		<p class="normal">Комментарий</p>
+		<textarea name="" class="collect__input-comment normal" cols="30" rows="10"></textarea>
+		<p class="normal">Вам есть 18 лет?</p>
+		<div class="collect__radio-buttons">					
+				<input type="radio" name="eighteen" class="custom-radio" id="yes"/>							
+				<label for="yes">Да</label>
+				<input type="radio" name="eighteen" class="custom-radio" id="no"/>
+				<label for="no">Нет</label>						  
+		</div>
+		<div class="collect__checkbox">						
+				<input type="checkbox" name="contract" class="custom-checkbox" id="contract" value="yes" /> 
+				<label for="contract"> 
+						<p class="small collect__checkbox__text">Нажимая кнопку, я принимаю условия<span>Лицензионного договора</span></p>
+				</label>
+		</div>
+		<div class="collect__buttons">
+				<div class="collect__buttons-btn">
+						<input type="submit" class="find normal" name="" value="Найти тур">
+				</div>						
+				<div class="collect__buttons-btn">
+						<input type="reset" class="reset normal" name="" value="Сбросить">
 				</div>
+		</div>
+	</form>
 		
 </section>
 <section class="review container">
@@ -328,6 +331,18 @@
 			header.classList.add('header_fixed');
 		} else {
 			header.classList.remove('header_fixed');}
+	});
+
+	const choiceTabs = document.querySelectorAll('.choice__item');
+
+	choiceTabs.forEach((tab) => {
+			tab.addEventListener('click', (e) => {
+					e.preventDefault();
+					choiceTabs.forEach((item) => {
+							item.classList.remove('active');
+					});
+					tab.classList.add('active');
+			});
 	});
 
 	let select = document.querySelector(".collect__dropdown");

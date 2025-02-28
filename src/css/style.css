@@ -88,6 +88,7 @@ h3 {
 }
 .header__phone {
 	color: #ffffff;
+	text-wrap: nowrap;
 }
 .header_fixed {
 	position: fixed;
@@ -134,7 +135,7 @@ h3 {
 .promo__subtitle {
 	max-width: 562px;
 	margin: 50px auto 0 auto;
-	color:  #ffffff;
+	color: #ffffff;
 	text-align: center;
 }
 .promo__button {
@@ -154,7 +155,7 @@ h3 {
 	color: #fff;
 	cursor: pointer;
 }
-  .promo__button:active {
+.promo__button:active {
 	background: #F8E6BE;
 	color: #1B1F2B;
 }
@@ -170,6 +171,7 @@ h3 {
 }
 .choice__items a {
 	position: relative;
+	transition: color 0.3s ease;
 }
 .choice__items a:not(.active):after {
 	content: "";
@@ -318,6 +320,9 @@ h3 {
 	background: #F4F0E9;
 	cursor: pointer;
 }
+.collect__dropdown_wrapper {
+	position: relative;
+}
 .collect__dropdown {
 	color: #A6A6A6;
 	margin-top: 8px;
@@ -330,10 +335,16 @@ h3 {
 	padding: 19px;
 	cursor: pointer;
 	outline: none;
-	background: #F9F7F4 url(../icons/ic-dropdown.svg) calc(100% - 20px) 21px/26px 26px no-repeat;
+	background: #F9F7F4;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+.collect__dropdown_icon {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 .collect__dropdown_selected {
 	color: #1B1F2B;
@@ -494,7 +505,7 @@ h3 {
 .reset:hover {
 	background: #F1F3F2;
 }
-.reset:active{
+.reset:active {
 	background: #D9DFDB;
 }
 .review__title {
@@ -684,7 +695,7 @@ h3 {
 	position: absolute;
 	display: block;
 	margin-top: 6px;
-	top: 70%;
+	bottom: 0;
 	left: 50%;
 	transform: translate(-50%);
 	height: 1px;
@@ -701,7 +712,7 @@ h3 {
 }
 .footer-mini__photo {
 	max-width: 370px;
-	height: 370px;
+	height: auto;
 	border-radius: 50px;
 }
 .footer-mini__text {
@@ -877,7 +888,6 @@ h3 {
 	}
 	.header__phone {
 		font-size: 18px;
-		text-wrap: nowrap;
 	}
 	.footer-mini {
 		width: 100%;
@@ -1036,7 +1046,6 @@ h3 {
 	.collect__dropdown {
 		font-size: 16px;
 		line-height: 142%;
-		background: #F9F7F4 url(../icons/ic-dropdown.svg) calc(100% - 9px) 9px/26px 26px no-repeat;
 	}
 	.collect__checkbox span {
 		font-size: 16px;
@@ -1175,7 +1184,7 @@ h3 {
 	}
 	.choice__card:hover .choice__block {
 		padding: 0;
-		background:none;
+		background: none;
 		margin-left: 0;
 	}
 	.choice__card:hover .choice__block:active {
@@ -1246,7 +1255,6 @@ h3 {
 		margin: 75px auto;
 	}
 	.footer-mini__photo {
-		height: 133px;
 		width: 130px;
 		border-radius: 20px;
 	}
@@ -1266,7 +1274,7 @@ h3 {
 		padding: 21px 21px;
 		justify-content: center;
 	}
-	.footer img  {
+	.footer img {
 		width: 22px;
 		height: 22px;
 		margin-right: 5px;
