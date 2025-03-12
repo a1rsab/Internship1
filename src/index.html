@@ -9,6 +9,8 @@
     <meta name="keywords" content="Cтажировка">
     <link rel="icon" sizes="32x32" href="icons/favicon 32х32.png">
     <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -20,10 +22,10 @@
                 <div class="header__img"></div>
 			</a>
             <nav class="header__nav">
-                <a href="#" class="header__link normal">Туры</a>
-            	<a href="#" class="header__link normal">Создать тур</a>
-         		<a href="#" class="header__link normal">Отзывы</a>
-         		<a href="#" class="header__link normal">Истории</a>
+                <a href="#tour" class="header__link normal">Туры</a>
+            	<a href="#create" class="header__link normal">Создать тур</a>
+         		<a href="#review" class="header__link normal">Отзывы</a>
+         		<a href="#history" class="header__link normal">Истории</a>
             </nav>
             <a href="tel:+79999999999" class="header__phone normal">+7 999 999 99 99</a>
         </div>
@@ -38,7 +40,7 @@
 </section>
     
 <section class="choice container">
-	<h2 class="choice__title">Выбери свой тур</h2>
+	<h2 id="tour" class="choice__title">Выбери свой тур</h2>
 	<nav class="choice__items">
 		<a href="#" class="choice__item big active">Популярные</a>
 		<a href="#" class="choice__item big">Авторские</a>
@@ -105,14 +107,14 @@
 </section>
 
 <section class="collect container">
-	<h2 class="collect__title">Собери свой тур</h2>
+	<h2 id="create" class="collect__title">Собери свой тур</h2>
 	<p class="normal collect__subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 	<form class="collect__form">
 			<div class="collect__row"> 
 				<div class="collect__item">
 					<label class="normal">
 						Имя
-						<input placeholder="Введите Ваше имя" type="text" class="collect__input normal">
+						<input placeholder="Введите Ваше имя" name="name" type="text" class="collect__input normal">
 					</label>
 				</div>
 				<div class="collect__item">
@@ -133,24 +135,24 @@
 		<div class="collect__row"> 
 				<div class="collect__item">	
 					<label class="normal">Email
-							<input placeholder="example@mail.com" type="email" class="collect__input normal">
+							<input placeholder="example@mail.com" name="email" type="email" class="collect__input normal">
 					</label>
 			</div>	
 			<div class="collect__item">				
 					<label class="normal">Телефон
-							<input placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="tel" class="collect__input normal">
+							<input id="phone" placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="tel" class="collect__input normal">
 					</label>				
 			</div>	
 			</div>				
 		<div class="collect__row"> 
 			<div class="collect__item">						
 					<label class="normal">Дата от
-							<input placeholder="ДД.ММ.ГГГГ" type="text" class="collect__input normal">
+							<input  id="datefrom" placeholder="ДД.ММ.ГГГГ" type="text" class="collect__input normal">
 					</label>					
 			</div>	
 			<div class="collect__item">				
 					<label class="normal">Дата до
-							<input placeholder="ДД.ММ.ГГГГ" type="text" class="collect__input normal">
+							<input  id="date" placeholder="ДД.ММ.ГГГГ" type="text" class="collect__input normal">
 					</label>					
 			</div>	
 		</div>				
@@ -181,7 +183,7 @@
 		
 </section>
 <section class="review container">
-<h2 class="review__title">Отзывы наших путешественников</h2>
+<h2 id="review" class="review__title">Отзывы наших путешественников</h2>
 <p class="normal review__subtitle">Идейные соображения высшего порядка,
 	а также рамки и место обучения кадров</p>
 	<div class="review__cards">
@@ -235,7 +237,7 @@
 		</div>
 </section>
 <section class="history container">
-		<h2>Истории путешествий</h2>
+		<h2 id="history">Истории путешествий</h2>
 		<p class="normal">Идейные соображения высшего порядка,
 			а также рамки и место обучения кадров</p>
 	<div class="history__card">
@@ -348,6 +350,17 @@
 	let select = document.querySelector(".collect__dropdown");
       select.addEventListener("change", () => {
         select.classList.add("collect__dropdown_selected");
+    });
+
+	$(document).ready(function(){
+            $("#phone").inputmask("+7 (999) 999-99-99");
+    });
+
+	$(document).ready(function(){
+            $("#date").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
+    });
+	$(document).ready(function(){
+            $("#datefrom").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
     });
   </script>
 
