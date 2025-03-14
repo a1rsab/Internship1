@@ -766,6 +766,7 @@ input::placeholder {
 	display: flex;
 	align-items: center;
 	gap: 25px;
+	
 }
 .footer__links-social > div {
 	display: flex;
@@ -777,29 +778,48 @@ input::placeholder {
 .footer__links-social-block-vk {
 	margin-bottom: 3px;
 }
-.footer__links-social p {
+.footer__links-social a {
 	color: #1B1F2B;
 	position: relative;
 	cursor: pointer;
 }
-.footer__links-social p a {
-	color: #1B1F2B;
+.footer__links-social-block {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
 }
-.footer__links-social p::after {
-	content: "";
-	position: absolute;
-	display: block;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 1px;
-	width: 0%;
-	background-color: #1B1F2B;
-	transition: width 0.3s ease;
+.footer__links-social-block-text {
+	position: relative;
+	display: inline-flex;
+	align-items: center;  
 }
-.footer__links-social p:hover::after {
-	content: "";
-	width: 100%;
+.footer__links-social-block-wrapper {
+    display: flex;
+	align-items: center;
+	text-decoration: none;
 }
+.footer__links-social-block-text {
+    position: relative;
+    text-decoration: none; 
+	padding-bottom: 2px;
+}
+.footer__links-social-block-text::after {
+    content: "";
+    position: absolute;
+	bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0%;
+    background-color: #1B1F2B;
+    transition: width 0.3s ease;
+}
+.footer__links-social-block:hover .footer__links-social-block-text::after {
+    width: 100%;
+}
+
+
+
 
 @media screen and (max-width: 1024px) {
 	body {
