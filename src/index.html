@@ -39,7 +39,7 @@
 	</div>
 </section>
     
-<section class="choice container">
+<section id="tour" class="choice container">
 	<h2 id="tour" class="choice__title">Выбери свой тур</h2>
 	<nav class="choice__items">
 		<a href="#" class="choice__item big active">Популярные</a>
@@ -106,8 +106,8 @@
 		</div>
 </section>
 
-<section class="collect container">
-	<h2 id="create" class="collect__title">Собери свой тур</h2>
+<section id="create" class="collect container">
+	<h2  class="collect__title">Собери свой тур</h2>
 	<p class="normal collect__subtitle">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 	<form class="collect__form">
 			<div class="collect__row"> 
@@ -182,8 +182,8 @@
 	</form>
 		
 </section>
-<section class="review container">
-<h2 id="review" class="review__title">Отзывы наших путешественников</h2>
+<section id="review" class="review container">
+<h2  class="review__title">Отзывы наших путешественников</h2>
 <p class="normal review__subtitle">Идейные соображения высшего порядка,
 	а также рамки и место обучения кадров</p>
 	<div class="review__cards">
@@ -236,8 +236,8 @@
 			<img src="img/travel photo-12.jpg" alt="photo">
 		</div>
 </section>
-<section class="history container">
-		<h2 id="history">Истории путешествий</h2>
+<section id="history" class="history container">
+		<h2 >Истории путешествий</h2>
 		<p class="normal">Идейные соображения высшего порядка,
 			а также рамки и место обучения кадров</p>
 	<div class="history__card">
@@ -306,19 +306,19 @@
 	  <div class="footer__links">
 		<p class="normal">Наши социальные сети</p>
 		<div class="footer__links-social">
-			<a href="#" class="normal footer__links-social-block"> 
+			<a href="https://www.instagram.com" class="normal footer__links-social-block"> 
 				<span class="footer__links-social-block-wrapper">
 					<img src="icons/inst.png" alt="instagram">
 				</span>
 				<span class="footer__links-social-block-text">instagram</span>
 			</a>
-			<a href="#" class="normal footer__links-social-block"> 
+			<a href="https://www.facebook.com" class="normal footer__links-social-block"> 
 				<span class="footer__links-social-block-wrapper">
 					<img src="icons/fb.png" alt="facebook">
 				</span>
 				<span class="footer__links-social-block-text">facebook</span>
 			</a>
-			<a href="#" class="normal footer__links-social-block"> 
+			<a href="https://vk.com/" class="normal footer__links-social-block"> 
 				<span class="footer__links-social-block-wrapper">
 					<img src="icons/vk.png" alt="vkontakte">
 				</span>
@@ -356,9 +356,24 @@
         select.classList.add("collect__dropdown_selected");
     });
 
+
 	$(document).ready(function(){
-            $("#phone").inputmask("+7 (999) 999-99-99");
-    });
+    $("#phone").inputmask({
+        mask: "+ 7 ( 999) 999- 99- 99",  
+        showMaskOnHover: true,   
+        showMaskOnFocus: true,   
+        placeholder: "_",        
+        greedy: false,           
+        autoUnmask: false,       
+        insertMode: true,        
+        definitions: { 
+            "9": { 
+                validator: "[0-9]",  
+                placeholder: "_ "   
+            	}
+        	}
+    	});
+	});
 
 	$(document).ready(function(){
             $("#date").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
@@ -366,6 +381,8 @@
 	$(document).ready(function(){
             $("#datefrom").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
     });
+
+
   </script>
 
 </body>

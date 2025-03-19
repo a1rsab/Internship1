@@ -61,6 +61,7 @@ h3 {
 	max-width: 1200px;
 	width: 100%;
 	padding: 0 12px;
+	scroll-margin-top: 80px;
 }
 .header {
 	width: 100%;
@@ -818,9 +819,7 @@ input::placeholder {
     width: 100%;
 }
 
-
-
-
+ 
 @media screen and (max-width: 1024px) {
 	body {
 		background-color: #F9F7F4;
