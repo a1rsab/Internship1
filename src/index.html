@@ -361,7 +361,7 @@
     $("#phone").inputmask({
         mask: "+ 7 ( 999) 999- 99- 99",  
         showMaskOnHover: true,   
-        showMaskOnFocus: true,   
+        showMaskOnFocus: false,   
         placeholder: "_",        
         greedy: false,           
         autoUnmask: false,       
@@ -375,13 +375,30 @@
     	});
 	});
 
-	$(document).ready(function(){
-            $("#date").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
-    });
-	$(document).ready(function(){
-            $("#datefrom").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
-    });
-
+	// $(document).ready(function(){
+    //         $("#date").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
+    // });
+	document.addEventListener("DOMContentLoaded", function () {
+    Inputmask({
+        mask: "99.99.9999", 
+        placeholder: "ДД.ММ.ГГГГ", 
+        showMaskOnHover: true,  
+        showMaskOnFocus: false,  
+        clearIncomplete: true  
+   			 }).mask("#date"); 
+	});
+	document.addEventListener("DOMContentLoaded", function () {
+    Inputmask({
+        mask: "99.99.9999", 
+        placeholder: "ДД.ММ.ГГГГ", 
+        showMaskOnHover: true,  
+        showMaskOnFocus: false,  
+        clearIncomplete: true  
+   			 }).mask("##datefrom"); 
+	});
+	// $(document).ready(function(){
+    //         $("#datefrom").inputmask("99.99.9999", { "placeholder": "ДД.ММ.ГГГГ" });
+    // });
 
   </script>
 
