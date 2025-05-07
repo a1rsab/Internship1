@@ -9,11 +9,6 @@
     <meta name="keywords" content="Cтажировка">
     <link rel="icon" sizes="32x32" href="icons/favicon 32х32.png">
     <link rel="stylesheet" href="css/style.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -22,12 +17,14 @@
                 <div class="header__img"></div>
 			</a>
             <nav class="header__nav">
-                <a href="#tour" class="header__link normal">Туры</a>
-            	<a href="#create" class="header__link normal">Создать тур</a>
-         		<a href="#review" class="header__link normal">Отзывы</a>
-         		<a href="#history" class="header__link normal">Истории</a>
+				<ul class="menu">
+					<li><a href="#tour" class="header__link normal">Туры</a></li>
+					<li><a href="#create" class="header__link normal">Создать тур</a></li>
+					<li><a href="#review" class="header__link normal">Отзывы</a></li>
+					<li><a href="#history" class="header__link normal">Истории</a></li>
+				</ul>
             </nav>
-            <a href="tel:+79999999999" class="header__phone normal">+7 999 999 99 99</a>
+            <a href="tel:+79999999999" class="normal header__phone ">+7 999 999 99 99</a>
         </div>
     </header>
 
@@ -40,67 +37,69 @@
 </section>
     
 <section id="tour" class="choice container">
-	<h2 id="tour" class="choice__title">Выбери свой тур</h2>
-	<nav class="choice__items">
-		<a href="#" class="choice__item big active">Популярные</a>
-		<a href="#" class="choice__item big">Авторские</a>
-		<a href="#" class="choice__item big">Походы</a>
-		<a href="#" class="choice__item big">Сплавы</a>
-		<a href="#" class="choice__item big">Велопрогулки</a>
+	<h2 class="choice__title">Выбери свой тур</h2>
+	<nav>
+		<ul class="choice__items">
+			<li><a href="#" class="choice__item big active">Популярные</a></li>
+			<li><a href="#" class="choice__item big">Авторские</a></li>
+			<li><a href="#" class="choice__item big">Походы</a></li>
+			<li><a href="#" class="choice__item big">Сплавы</a></li>
+			<li><a href="#" class="choice__item big">Велопрогулки</a></li>
+		</ul>
 	</nav>
 	<div class="choice__wrapper">
 		<div class="choice__card">
-			<img src="img/card tour photo-1.jpg" alt="card" class="choice__img">
+			<img src="public/img/card tour photo-1.jpg" alt="card_1" class="choice__img">
 			<h3 class="choice__text">Путешествие в горы</h3>
-			<p class="small choice__price">от 80 000 руб</p>
+			<span class="small choice__price">от 80 000 руб</span>
 			<div class="choice__block">
-				<p class="big choice__more">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow" class="choice__arrow">
+				<span class="big choice__more">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow" class="choice__arrow">
 			</div>
 		</div>
 		<div class="choice__card">
-			<img src="img/card tour photo-2.jpg" alt="card" class="choice__img">
+			<img src="public/img/card tour photo-2.jpg" alt="card_2" class="choice__img">
 			<h3 class="choice__text">Путешествие в горы</h3>
-			<p class="small choice__price">от 80 000 руб</p>
+			<span class="small choice__price">от 80 000 руб</span>
 			<div class="choice__block">
-				<p class="big choice__more">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow" class="choice__arrow">
+				<span class="big choice__more">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow" class="choice__arrow">
 			</div>
 		</div>
 		<div class="choice__card">
-			<img src="img/card tour photo-3.png" alt="card" class="choice__img">
+			<img src="public/img/card tour photo-3.png" alt="card_3" class="choice__img">
 			<h3 class="choice__text">Путешествие в горы</h3>
-			<p class="small choice__price">от 80 000 руб</p>
+			<span class="small choice__price">от 80 000 руб</span>
 			<div class="choice__block">
-				<p class="big choice__more">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow" class="choice__arrow">
+				<span class="big choice__more">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow" class="choice__arrow">
 			</div>
 		</div>
 		<div class="choice__card">
-			<img src="img/card tour photo-4.jpg" alt="card" class="choice__img">
+			<img src="public/img/card tour photo-4.jpg" alt="card_4" class="choice__img">
 			<h3 class="choice__text">Путешествие в горы</h3>
-			<p class="small choice__price">от 80 000 руб</p>
+			<span class="small choice__price">от 80 000 руб</span>
 			<div class="choice__block">
-				<p class="big choice__more">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow" class="choice__arrow">
+				<span class="big choice__more">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow" class="choice__arrow">
 			</div>
 		</div>
 		<div class="choice__card">
-			<img src="img/card tour photo-5.jpg" alt="card" class="choice__img">
+			<img src="public/img/card tour photo-5.jpg" alt="card_5" class="choice__img">
 			<h3 class="choice__text">Путешествие в горы</h3>
-			<p class="small choice__price">от 80 000 руб</p>
+			<span class="small choice__price">от 80 000 руб</span>
 			<div class="choice__block">
-				<p class="big choice__more">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow" class="choice__arrow">
+				<span class="big choice__more">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow" class="choice__arrow">
 			</div>
 		</div>
 		<div class="choice__card">
-			<img src="img/card tour photo-6.jpg" alt="card" class="choice__img">
+			<img src="public/img/card tour photo-6.jpg" alt="card_6" class="choice__img">
 			<h3 class="choice__text">Путешествие в горы</h3>
-			<p class="small choice__price">от 80 000 руб</p>
+			<span class="small choice__price">от 80 000 руб</span>
 			<div class="choice__block">
-				<p class="big choice__more">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow" class="choice__arrow">
+				<span class="big choice__more">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow" class="choice__arrow">
 			</div>
 		</div>
 		</div>
@@ -121,14 +120,14 @@
 					<label class="normal">
 						Направление
 					</label>
-					<br>
+					<!-- <br> -->
 					<div class="collect__dropdown_wrapper">
 							<select class="collect__dropdown normal">
 					  				<option value="#" hidden>Куда хотите ехать</option>
 					  				<option value="#">Первый пункт</option>
 					  				<option value="#">Второй пункт</option>
 							</select>
-					<img class="collect__dropdown_icon" src="./icons/ic-dropdown.svg" alt="ic-dropdown">
+					<img class="collect__dropdown_icon" src="public/icons/ic-dropdown.svg" alt="arrow-dropdown">
 					</div>
 				</div>	
 			</div>
@@ -156,9 +155,9 @@
 					</label>					
 			</div>	
 		</div>				
-		<p class="normal">Комментарий</p>
+		<span class="normal">Комментарий</span>
 		<textarea name="" class="collect__input-comment normal" cols="30" rows="10"></textarea>
-		<p class="normal">Вам есть 18 лет?</p>
+		<span class="normal">Вам есть 18 лет?</span>
 		<div class="collect__radio-buttons">					
 				<input type="radio" name="eighteen" class="custom-radio" id="yes"/>							
 				<label for="yes">Да</label>
@@ -168,15 +167,15 @@
 		<div class="collect__checkbox">						
 				<input type="checkbox" name="contract" class="custom-checkbox" id="contract" value="yes" /> 
 				<label for="contract"> 
-						<p class="small collect__checkbox__text">Нажимая кнопку, я принимаю условия<span>Лицензионного договора</span></p>
+						<p class="small collect__checkbox__text">Нажимая кнопку, я принимаю условия<a>Лицензионного договора</a></p>
 				</label>
 		</div>
 		<div class="collect__buttons">
 				<div class="collect__buttons-btn">
-						<input type="submit" class="find normal" name="" value="Найти тур">
+					<button type="submit" class="find normal">Найти тур</button>
 				</div>						
 				<div class="collect__buttons-btn">
-						<input type="reset" class="reset normal" name="" value="Сбросить">
+					<button type="reset" class="reset normal">Сбросить</button>
 				</div>
 		</div>
 	</form>
@@ -188,26 +187,24 @@
 	а также рамки и место обучения кадров</p>
 	<div class="review__cards">
 		<div class="review__cards__block">
-			<p class="big review__cards__block-text">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
+			<p class="big">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение модели развития.</p>
 			<div class="review__cards__block-footer">
 				<div class="review__cards-block-name">
 					<h3 class="review__name">Мария</h3>
-					<p class="small tour">Тур: Вдали от дома </p>
+					<span class="small tour">Тур: Вдали от дома </span>
 				</div>
-				<img src="img/review photo-1.jpg" alt="photo">
+				<img src="public/img/review photo-1.jpg" alt="review_photo_1">
 			</div>
 		</div>
 		<div class="review__cards__block">
-			<p class="big review__cards__block-text">Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.
-				<br>
-				<br>
-				Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.</p>
+			<p class="big">Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+			<p class="big review__cards__block-text">Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития.</p>
 			<div class="review__cards__block-footer">
 				<div class="review__cards-block-name">
 					<h3 class="review__name">Павел</h3>
-					<p class="small">Тур: Путешествие в горы</p>
+					<span class="small">Тур: Путешествие в горы</span>
 				</div>
-				<img src="img/review photo-2.jpg" alt="photo">
+				<img src="public/img/review photo-2.jpg" alt="review_photo_1">
 			</div>
 		</div>
 	</div>
@@ -217,23 +214,23 @@
 	<p class="normal photo__subtitle">Идейные соображения высшего порядка,
 		а также рамки и место обучения кадров</p>
 		<div class="photo__row-top">
-			<img src="img/travel photo-1.jpg" alt="photo">
-			<img src="img/travel photo-2.jpg" alt="photo">
-			<img src="img/travel photo-3.jpg" alt="photo">
-			<img src="img/travel photo-4.jpg" alt="photo">
+			<img src="public/img/travel photo-1.jpg" alt="travel_photo_1">
+			<img src="public/img/travel photo-2.jpg" alt="travel_photo_2">
+			<img src="public/img/travel photo-3.jpg" alt="travel_photo_3">
+			<img src="public/img/travel photo-4.jpg" alt="travel_photo_4">
 		</div>
 		<div class="photo__row-middle">
-			<img src="img/travel photo-5.jpg" alt="photo">
-			<img src="img/travel photo-6.jpg" alt="photo">
-			<img src="img/travel photo-7.jpg" alt="photo">
-			<img src="img/travel photo-8.png" alt="photo">
-			<img src="img/travel photo-13.jpg" alt="photo">
+			<img src="public/img/travel photo-5.jpg" alt="travel_photo_5">
+			<img src="public/img/travel photo-6.jpg" alt="travel_photo_6">
+			<img src="public/img/travel photo-7.jpg" alt="travel_photo_7">
+			<img src="public/img/travel photo-8.png" alt="travel_photo_8">
+			<img src="public/img/travel photo-13.jpg" alt="travel_photo_9">
 		</div>
 		<div class="photo__row-bottom">
-			<img src="img/travel photo-9.jpg" alt="photo">
-			<img src="img/travel photo-10.jpg" alt="photo">
-			<img src="img/travel photo-11.jpg" alt="photo">
-			<img src="img/travel photo-12.jpg" alt="photo">
+			<img src="public/img/travel photo-9.jpg" alt="travel_photo_10">
+			<img src="public/img/travel photo-10.jpg" alt="travel_photo_11">
+			<img src="public/img/travel photo-11.jpg" alt="travel_photo_12">
+			<img src="public/img/travel photo-12.jpg" alt="travel_photo_13">
 		</div>
 </section>
 <section id="history" class="history container">
@@ -241,7 +238,7 @@
 		<p class="normal">Идейные соображения высшего порядка,
 			а также рамки и место обучения кадров</p>
 	<div class="history__card">
-		<img src="img/story photo-1.jpg" alt="photo" class="history__card-img">
+		<img src="public/img/story photo-1.jpg" alt="card-img_1" class="history__card-img">
 		<h3>Автостопом в Стамбул</h3>
 		<p class="normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
 		<ul class="history__card-list normal">
@@ -251,8 +248,8 @@
 		</ul>
 		<div class="history__card-footer">
 			<div class="history__card-footer-more">
-				<p class="big">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow_right" class="history__card-footer-more-arrow">
+				<span class="big">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow_right" class="history__card-footer-more-arrow">
 			</div>
 			<div class="history__card-footer-links">
 				<a href="#" class="links__item normal">instagram</a>
@@ -262,13 +259,13 @@
 		</div>
 	</div>
 	<div class="history__card">
-		<img src="img/story photo-2.jpg" alt="photo" class="history__card-img">
+		<img src="public/img/story photo-2.jpg" alt="card-img_2" class="history__card-img">
 		<h3>Автостопом в Стамбул</h3>
 		<p class="normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
 		<div class="history__card-footer">
 			<div class="history__card-footer-more">
-				<p class="big">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow_right" class="history__card-footer-more-arrow">
+				<span class="big">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow_right" class="history__card-footer-more-arrow">
 			</div>
 			<div class="history__card-footer-links">
 				<a href="#" class="links__item normal">instagram</a>
@@ -277,13 +274,13 @@
 		</div>
 	</div>
 	<div class="history__card">
-		<img src="img/story photo-3.jpg" alt="photo" class="history__card-img">
+		<img src="public/img/story photo-3.jpg" alt="card-img_3" class="history__card-img">
 		<h3>Автостопом в Стамбул</h3>
 		<p class="normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.</p>
 		<div class="history__card-footer">
 			<div class="history__card-footer-more">
-				<p class="big">Подробнее</p>
-				<img src="icons/arrow.png" alt="arrow_right" class="history__card-footer-more-arrow">
+				<span class="big">Подробнее</span>
+				<img src="public/icons/arrow.png" alt="arrow_right" class="history__card-footer-more-arrow">
 			</div>
 			<div class="history__card-footer-links">
 				<a href="#" class="links__item normal">instagram</a>
@@ -294,7 +291,7 @@
 	</div>
 </section>
 <section class="footer-mini container">
-<img src="img/footer-photo.jpg" alt="photo" class="footer-mini__photo">
+<img src="public/img/footer-photo.jpg" alt="photo" class="footer-mini__photo">
 <div class="footer-mini__text">
 	<h3>Пора в путешествие вместе с нами!</h3>
 	<p class="normal">Напиши на почту и узнай подробности на 
@@ -304,23 +301,23 @@
 <footer class="footer">
 	<div class="container">
 	  <div class="footer__links">
-		<p class="normal">Наши социальные сети</p>
+		<span class="normal social">Наши социальные сети</span>
 		<div class="footer__links-social">
-			<a href="https://www.instagram.com" class="normal footer__links-social-block"> 
+			<a href="https://www.instagram.com" class="normal footer__links-social-block" target="_blank" rel="noopener noreferrer"> 
 				<span class="footer__links-social-block-wrapper">
-					<img src="icons/inst.png" alt="instagram">
+					<img src="public/icons/inst.png" alt="instagram">
 				</span>
 				<span class="footer__links-social-block-text">instagram</span>
 			</a>
-			<a href="https://www.facebook.com" class="normal footer__links-social-block"> 
+			<a href="https://www.facebook.com" class="normal footer__links-social-block" target="_blank" rel="noopener noreferrer"> 
 				<span class="footer__links-social-block-wrapper">
-					<img src="icons/fb.png" alt="facebook">
+					<img src="public/icons/fb.png" alt="facebook">
 				</span>
 				<span class="footer__links-social-block-text">facebook</span>
 			</a>
-			<a href="https://vk.com/" class="normal footer__links-social-block"> 
+			<a href="https://vk.com/" class="normal footer__links-social-block" target="_blank" rel="noopener noreferrer"> 
 				<span class="footer__links-social-block-wrapper">
-					<img src="icons/vk.png" alt="vkontakte">
+					<img src="public/icons/vk.png" alt="vkontakte">
 				</span>
 				<span class="footer__links-social-block-text">vkontakte</span>
 			</a>
@@ -330,7 +327,7 @@
 	</div>
   </footer>
 
-  <script>
+  <!-- <script>
 	const header = document.querySelector('.header');
 	window.addEventListener('scroll', () => {
 		if (window.pageYOffset > 450) {
@@ -393,7 +390,8 @@
         clearIncomplete: true  
    			 }).mask("#datefrom"); 
 	});
-  </script>
-
+  </scrip> -->
+  <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

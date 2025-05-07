@@ -1,0 +1,108 @@
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	z-index: 2;
+}
+.header .header__img {
+	content: url(../../../public/icons/YourTour.svg);
+}
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 29px;
+	margin: 0 auto;
+}
+.header__phone.normal {
+	color: #ffffff;
+	text-wrap: nowrap;
+}
+.header_fixed {
+	position: fixed;
+  	background: rgba(243, 239, 232, 0.6);
+  	backdrop-filter: blur(27px);
+}
+.header_fixed .header__link::after {
+	content: "";
+	background-color: #1B1F2B;
+}
+.header_fixed .header__img {
+	content: url(../../../public/icons/YourTour-bl.svg);
+}
+.header_fixed a {
+	color: #1B1F2B;
+}
+.header__nav a::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	height: 1px;
+	width: 0%;
+	background-color: #fff;
+	transition: width 0.3s ease;
+}
+.header__nav a:hover::after {
+	content: "";
+	width: 100%;
+}
+.menu {
+	display: flex;
+	gap: 50px;
+	list-style: none;
+}
+.menu a {
+	color: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+	.header__nav {
+		gap: 30px;
+	}
+	.header .container {
+		padding: 29px 57px;
+	}
+}
+@media screen and (max-width: 878px) {
+	.header__nav {
+		gap: 10px;
+		width: 100%;
+		justify-content: center;
+	}
+	.header__nav a {
+		font-size: 18px;
+	}
+	.header__phone {
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.header__nav {
+		gap: 8px;
+	}
+	.header__nav a {
+		font-size: 16px;
+	}
+	.header__phone {
+		font-size: 16px;
+	}
+}
+@media screen and (max-width: 712px) {
+	.header__nav {
+		display: none;
+	}
+}
+@media screen and (max-width: 580px) {
+	.header .header__img {
+		width: 133px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.header .container {
+		padding: 33px 20px;
+	}
+	.header {
+		height: 88px;
+	}
+}
