@@ -11,37 +11,51 @@
 @import url('./sections/footer-mini/footer-mini.css');
 @import url('./sections/footer/footer.css');
 
-body {
-	background-color: white;
+
+:root {
+	--color-white: #FFFFFF;
+	--color-dark: #1B1F2B;
+	--color-accent: #EFA501;
+	--color-green: #286562;
+	--color-beige: #F4F0E9;
+	--color-grey: #A6A6A6;
 }
+
+body {
+	background-color: var(--color-white);
+}
+
 h1 {
-	color: white;
 	font-size: 96px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 109%;
 	letter-spacing: 1.92px;
 	text-align: center;
+	color: var(--color-white);
 }
+
 h2 {
-	color:  #1B1F2B;
 	font-size: 59px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 124%; 
 	text-align: center;
+	color: var(--color-dark);
 }
+
 h3 {
-	color: #1B1F2B;
 	font-size: 35px;
 	font-style: normal;
 	font-weight: 500;
 	line-height: 122%; 
+	color: var(--color-dark);
 }
+
 .container {
-	margin: 135px auto;
-	max-width: 1200px;
 	width: 100%;
+	max-width: 1200px;
+	margin: 135px auto;
 	padding: 0 12px;
 	scroll-margin-top: 80px;
 }
@@ -50,24 +64,29 @@ h3 {
 	body {
 		background-color: #F9F7F4;
 	}
+
 	.container {
 		padding: 0 53px;
 	}
 }
+
 @media screen and (max-width: 878px) {
 	.container {
 		padding: 0 21px;
 	}
 }
+
 @media screen and (max-width: 768px) {
 	h1 {
 		font-size: 80px;
 	}
 }
+
 @media screen and (max-width: 712px) {
 	h1 {
 		font-size: 60px;
 	}
+
 	.container {
 		margin: 77px auto;
 	}
@@ -77,6 +96,7 @@ h3 {
 	h2 {
 		font-size: 50px;
 	}
+
 	h3 {
 		font-size: 30px;
 	}
@@ -86,27 +106,28 @@ h3 {
 	h1 {
         font-size: 45px;
     }
+
 	h2 {
 		font-size: 35px;
 	}
+
 	h3 {
 		font-size: 30px;
 	}
 }
 
 @media screen and (max-width: 360px) {
-	body {
-		background-color: #F9F7F4;
-	}
 	h1 {
 		font-size: 34px;
 		line-height: 112%; 
 		letter-spacing: 0.68px;
 	}
+
 	h2 {
 		font-size: 33px;
 		line-height: 112%;
 	}
+	
 	h3 {
 		font-size: 23px;
 		line-height: 120%;
