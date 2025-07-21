@@ -73,20 +73,13 @@ input::placeholder {
 	padding: 20px;
 	border: 1px solid var(--color-beige);
 	border-radius: 10px;
-	background: #F9F7F4;
+	background: url(../../../public/icons/ic-dropdown.svg)  calc(100% - 20px) 21px / 26px 26px no-repeat rgb(249, 247, 244);;
 	color: var(--color-grey);
 	cursor: pointer;
 	outline: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-}
-
-.collect__dropdown_icon {
-	position: absolute;
-	right: 0;
-	top: 50%;
-	transform: translate(-50%, -50%);
 }
 
 .collect__dropdown_selected {
@@ -100,7 +93,6 @@ input::placeholder {
 .collect__dropdown:hover {
 	border-radius: 10px;
 	border: 1px solid var(--color-beige);
-	background: var(--color-beige);
 }
 
 .collect__input-comment {
@@ -278,7 +270,7 @@ input::placeholder {
 @media screen and (max-width: 1024px) {
 	.collect__form {
 		border-radius: 50px;
-		padding: 60px;
+		padding: 58px;
 	}
 
 	.collect__row {
@@ -311,8 +303,8 @@ input::placeholder {
 	
 	.collect__row {
 		flex-direction: column;
-		margin-bottom: 30px;
-		gap: 30px;
+		margin-bottom: 29px;
+		gap: 28px;
 	}
 
 	.collect__checkbox span {
@@ -360,10 +352,6 @@ input::placeholder {
 		margin-top: 53px;
 	}
 
-	.collect__input {
-		height: 43px;
-	}
-
 	.collect__input-comment {
 		height: 132px;
 		margin-top: 8px;
@@ -389,6 +377,11 @@ input::placeholder {
 		width: 316px;
 		margin-top: 20px;
 	}
+	
+	.collect__form {
+		margin-top: 41px;
+		padding: 18px 19px 40px;
+	}
 
 	.collect__input {
 		padding: 10px;
@@ -396,10 +389,20 @@ input::placeholder {
 
 	.collect__dropdown {
 		padding: 10px;
+		background: url(../../../public/icons/ic-dropdown.svg)  calc(100% - 5px) 10px / 25px 25px no-repeat rgb(249, 247, 244);;
+
+	}
+
+	.collect__checkbox p.collect__checkbox__text {
+		margin-top: -5px;
 	}
 	
 	.collect__buttons-btn {
 		width: 135px;
-		margin-top: 23px;
+		margin-top: 28px;
+	}
+
+	.collect__checkbox .custom-checkbox + label::before {
+		margin: -3px 13px 0 0;
 	}
 }

@@ -150,15 +150,17 @@
 		margin-bottom: 50px;
 	}
 
+
 	.history__card {
-		padding: 30px;
+		padding: 27px;
 		height: 455px;
 		border-radius: 20px;
 		margin-bottom: 20px;
 	}
 
 	.history__card-footer-more {
-		margin-top: 50px;
+		padding: 0 16px;
+		margin-top: 60px;
 	}
 
 	.history__card-list {

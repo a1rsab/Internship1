@@ -164,6 +164,11 @@
 		margin-bottom: 50px;
 	}
 
+	.choice__items .active:after {
+	margin-top: 0;
+	
+} 
+
 	.choice__card {
 		padding: 25px 25px;
 		height: 318px;
